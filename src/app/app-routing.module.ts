@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'agregar',
     loadChildren: () => import('./pages/agregar/agregar.module').then( m => m.AgregarPageModule)
   },
+  {
+    path: '**',
+    loadChildren: () => import('./pages/notfound/notfound.module').then( m => m.NotfoundPageModule)
+  },
 ];
 
 @NgModule({
